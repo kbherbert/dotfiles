@@ -1,0 +1,18 @@
+[user]
+	name = Brady Herbert
+	email = kbradyherbert@gmail.com
+[alias]
+	co = checkout
+	cleanup = "!git branch | grep -ve master$ | xargs git branch -D && git remote prune origin"
+	unstage = reset HEAD --
+[pull]
+	rebase = false
+[includeIf "gitdir:~/dev/jw/"] # for bethel work
+    path = .gitconfig-bethel
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
