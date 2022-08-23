@@ -1,0 +1,2 @@
+dotfiles:
+	@bash restore.sh
