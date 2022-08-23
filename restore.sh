@@ -6,6 +6,7 @@ brew install neofetch
 brew install stow
 
 # re-stow stuff
+stow functions
 stow git
 stow vim
 stow zsh
