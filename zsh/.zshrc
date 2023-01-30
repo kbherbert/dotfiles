@@ -23,7 +23,7 @@ export BAT_THEME="gruvbox-dark"
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
 # Functions.
-source ~/.functions
+source ~/.dotfiles/functions/.functions
 
 # Custom aliases
 alias c="clear"
