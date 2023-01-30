@@ -27,7 +27,10 @@ source ~/.functions
 
 # Custom aliases
 alias c="clear"
-alias cat="bat"
+alias cat="bat --wrap=never"
+alias dc="docker-compose"
+alias dps-full="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.State}}\t{{.Status}}\t{{.Size}}\t{{.RunningFor}}"\"
+alias dps="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.State}}"\"
 
 # Starship + Warp
 if [[ $TERM_PROGRAM = "WarpTerminal" ]]; then
