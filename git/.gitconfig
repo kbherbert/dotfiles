@@ -8,7 +8,7 @@
 [pull]
 	rebase = false
 [includeIf "gitdir:~/dev/jw/"] # for bethel work
-    path = .gitconfig-bethel
+	path = .gitconfig-bethel
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
