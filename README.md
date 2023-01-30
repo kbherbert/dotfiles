@@ -1,5 +1,14 @@
 # A simple repo for managing my various "`.`" files
 
+```shell
+# install Starship
+curl -sS https://starship.rs/install.sh | sh
+
+# restore settings
+restore.sh | sh
+
+```
+
 References
 
 - [dotfiles.github.io](http://dotfiles.github.io)
