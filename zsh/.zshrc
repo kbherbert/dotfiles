@@ -29,7 +29,13 @@ source ~/.functions
 alias c="clear"
 alias cat="bat"
 
-# Starship.rs
+# Starship + Warp
+if [[ $TERM_PROGRAM = "WarpTerminal" ]]; then
+  export STARSHIP_CONFIG=~/.dotfiles/prompt/starship-warp.toml
+else
+  export STARSHIP_CONFIG=~/.dotfiles/prompt/starship.toml
+fi
+
 eval "$(starship init zsh)"
 
 # Node Version Manager

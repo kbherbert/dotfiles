@@ -1,0 +1,21 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+# Disables the dangling character in Warp
+[character]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[git_branch]
+symbol = " "
+
+[package]
+# display_private = true
+
+[username]
+# show_always = true
+format = 'brady: ($style)'
