@@ -5,6 +5,7 @@
 	co = checkout
 	cleanup = "!git branch | grep -ve master$ | xargs git branch -D && git remote prune origin"
 	unstage = reset HEAD --
+	revision = rev-list --count master
 [pull]
 	rebase = false
 [includeIf "gitdir:~/dev/jw/"] # for bethel
