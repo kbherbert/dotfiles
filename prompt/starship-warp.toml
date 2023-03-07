@@ -2,6 +2,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = false
+command_timeout = 1000
+
+[aws]
+disabled = true
 
 # Disables the dangling character in Warp
 [character]
