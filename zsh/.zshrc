@@ -11,10 +11,7 @@ DISABLE_AUTO_TITLE="true"
 # ENABLE_CORRECTION="true"
 
 # Plugins.
-plugins=(git copypath copyfile zsh-syntax-highlighting zsh-autosuggestions)
-
-# oh-my-zsh plugin settings.
-zstyle :omz:plugins:ssh-agent identities bethel
+plugins=(git copypath copyfile ssh-agent zsh-syntax-highlighting zsh-autosuggestions)
 
 # Define environment variables.
 export BAT_THEME="gruvbox-dark"
