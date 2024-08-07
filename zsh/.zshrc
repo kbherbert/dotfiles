@@ -1,23 +1,8 @@
-# Themes.
-#ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "half-life" "pmcgee" )
-
-# Case-sensitive completion.
-# CASE_SENSITIVE="true"
-
 # Disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Plugins.
-plugins=(git copypath copyfile ssh-agent zsh-syntax-highlighting zsh-autosuggestions)
-
 # Define environment variables.
 export BAT_THEME="gruvbox-dark"
-
-# Use environment variables.
-source ~/.oh-my-zsh/oh-my-zsh.sh
 
 # Functions.
 source ~/.dotfiles/functions/.functions
@@ -36,6 +21,7 @@ else
   export STARSHIP_CONFIG=~/.dotfiles/prompt/starship.toml
 fi
 
+# Prompt
 eval "$(starship init zsh)"
 
 # Node Version Manager
