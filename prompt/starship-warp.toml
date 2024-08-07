@@ -11,6 +11,13 @@ disabled = true
 [character]
 disabled = true
 
+[directory]
+truncation_symbol = '../'
+truncate_to_repo = false
+
+[directory.substitutions]
+'~/Workspace' = '~/w'
+
 [docker_context]
 disabled = true
 
