@@ -8,11 +8,16 @@ export BAT_THEME="gruvbox-dark"
 source ~/.dotfiles/functions/.functions
 
 # Custom aliases
+alias -g ..='cd ..'
 alias c="clear"
 alias cat="bat --wrap=never"
-alias dc="docker-compose"
 alias dps-full="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.State}}\t{{.Status}}\t{{.Size}}\t{{.RunningFor}}"\"
 alias dps="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.State}}"\"
+alias gst="git status"
+alias lsa='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
 
 # Starship + Warp
 if [[ $TERM_PROGRAM = "WarpTerminal" ]]; then
