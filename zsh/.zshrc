@@ -13,10 +13,15 @@ alias cat="bat --wrap=never"
 alias dps-full="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.State}}\t{{.Status}}\t{{.Size}}\t{{.RunningFor}}"\"
 alias dps="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.State}}"\"
 alias gst="git status"
-alias lsa='ls -lah'
-alias l='ls -lah'
-alias ll='ls -lh'
-alias la='ls -lAh'
+alias lsa="ls -lah" # primary files + hidden dir + parent dir
+alias la="ls -lAh"  # primary files + hidden dir
+alias ll="ls -lh"   # primary files
+
+alias els="eza -G"
+alias elsa="eza -l --icons --git -a -a --no-permissions" # primary files + hidden dir + parent dir
+alias ela="eza -l --icons --git -a --no-permissions"     # primary files + hidden dir
+alias ell="eza -l --icons --git --no-permissions"        # primary files
+alias elt="eza --tree --level=2 --long --icons --git --no-permissions"
 
 # Starship + Warp
 if [[ $TERM_PROGRAM = "WarpTerminal" ]]; then

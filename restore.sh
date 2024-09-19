@@ -1,5 +1,6 @@
 # install cli utilities
 brew install bat
+brew install eza
 brew install neofetch
 brew install git-lfs
 brew install tree
