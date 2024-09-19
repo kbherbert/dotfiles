@@ -7,9 +7,9 @@ command_timeout = 1000
 [aws]
 disabled = true
 
-# Disables the dangling character in Warp
+# Optional: disable the dangling character in Warp
 [character]
-disabled = true
+disabled = false
 
 [directory]
 truncation_symbol = '../'
