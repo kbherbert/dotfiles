@@ -2,6 +2,7 @@
 brew install bat
 brew install eza
 brew install neofetch
+brew install neovim
 brew install git-lfs
 brew install tree
 brew install zsh-autosuggestions
@@ -21,3 +22,4 @@ stow vim
 stow zsh
 stow git
 stow functions
+stow neovim
