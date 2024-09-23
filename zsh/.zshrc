@@ -8,6 +8,9 @@ export BAT_THEME="gruvbox-dark"
 source ~/.dotfiles/functions/.functions
 
 # Custom aliases
+alias ..="cd .."
+alias ../..="cd ../.."
+alias ../../..="cd ../../.."
 alias c="clear"
 alias cat="bat --wrap=never"
 alias dps-full="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.State}}\t{{.Status}}\t{{.Size}}\t{{.RunningFor}}"\"
