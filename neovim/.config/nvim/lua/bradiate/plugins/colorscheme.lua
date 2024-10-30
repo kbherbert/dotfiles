@@ -9,5 +9,12 @@ return {
         strings = false
       }
     }
+  },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "2nthony/vitesse.nvim",
+    dependencies = {
+      "tjdevries/colorbuddy.nvim"
+    }
   }
 }
