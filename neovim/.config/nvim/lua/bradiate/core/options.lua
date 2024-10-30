@@ -11,4 +11,4 @@ vim.opt.autoindent = true
 -- colors and themes
 vim.termguicolors = true
 vim.opt.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd.colorscheme "catppuccin-mocha"
