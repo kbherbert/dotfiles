@@ -11,6 +11,7 @@ source ~/.dotfiles/functions/.functions
 alias ..="cd .."
 alias ../..="cd ../.."
 alias ../../..="cd ../../.."
+alias vim="nvim"
 alias c="clear"
 alias cat="bat --wrap=never"
 alias dps-full="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.State}}\t{{.Status}}\t{{.Size}}\t{{.RunningFor}}"\"
