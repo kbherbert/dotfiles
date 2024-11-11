@@ -2,7 +2,7 @@
 DISABLE_AUTO_TITLE="true"
 
 # Define environment variables.
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="Catppuccin Frappe"
 
 # Functions.
 source ~/.dotfiles/functions/.functions
