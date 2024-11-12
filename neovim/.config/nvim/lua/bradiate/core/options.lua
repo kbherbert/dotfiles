@@ -12,4 +12,3 @@ vim.wo.relativenumber = true
 -- colors and themes
 vim.termguicolors = true
 vim.opt.background = "dark"
-vim.cmd.colorscheme "catppuccin-mocha"

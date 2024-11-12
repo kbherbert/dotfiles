@@ -1,20 +1,15 @@
 return {
-  {
-    "ellisonleao/gruvbox.nvim",
-    priority = 1000,
-    config = true,
-    opts = {
-      contrast = "medium",
-      italic = {
-        strings = false
-      }
+  "catppuccin/nvim",
+  name = "catppuccin", -- the name in Lazy plugin UI
+  priority = 1000,
+  lazy = false,
+  config = function()
+    local catppuccin = require("catppuccin")
+
+    catppuccin.setup {
+      --https://github.com/catppuccin/nvim/tree/main?tab=readme-ov-file#configuration
     }
-  },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-    "2nthony/vitesse.nvim",
-    dependencies = {
-      "tjdevries/colorbuddy.nvim"
-    }
-  }
+
+    vim.cmd("colorscheme catppuccin-mocha")
+  end
 }
