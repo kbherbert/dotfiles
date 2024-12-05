@@ -9,6 +9,9 @@ brew install tree
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 
+# install fonts
+brew install --cask font-jetbrains-mono-nerd-font
+
 # install engineering utilities
 brew install helm
 brew install k6
@@ -24,3 +27,4 @@ stow zsh
 stow git
 stow functions
 stow neovim
+stow terminal
