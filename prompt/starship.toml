@@ -1,19 +1,21 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-add_newline = false
+add_newline = true
+command_timeout = 1000
 
 [aws]
 disabled = true
 
-[docker_context]
-disabled = true
+[directory]
+truncation_symbol = '../'
+truncate_to_repo = false
+
+[directory.substitutions]
+'~/Workspace' = '~/w'
 
 [git_branch]
 symbol = " "
-
-[package]
-# display_private = true
 
 [username]
 # show_always = true

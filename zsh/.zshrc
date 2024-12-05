@@ -3,6 +3,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Define environment variables.
 export BAT_THEME="Catppuccin Frappe"
+export STARSHIP_CONFIG=~/.dotfiles/prompt/starship.toml
 
 # Functions.
 source ~/.dotfiles/functions/.functions
@@ -27,15 +28,12 @@ alias ela="eza -l --icons --git -a --no-permissions"     # primary files + hidde
 alias ell="eza -l --icons --git --no-permissions"        # primary files
 alias elt="eza --tree --level=2 --long --icons --git --no-permissions"
 
-# Starship + Warp
-if [[ $TERM_PROGRAM = "WarpTerminal" ]]; then
-  export STARSHIP_CONFIG=~/.dotfiles/prompt/starship-warp.toml
-else
-  export STARSHIP_CONFIG=~/.dotfiles/prompt/starship.toml
-
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
   # Plugins
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+  ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 fi
 
 # Prompt
