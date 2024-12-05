@@ -5,6 +5,9 @@ DISABLE_AUTO_TITLE="true"
 export BAT_THEME="Catppuccin Frappe"
 export STARSHIP_CONFIG=~/.dotfiles/prompt/starship.toml
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # Functions.
 source ~/.dotfiles/functions/.functions
 
