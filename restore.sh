@@ -1,9 +1,9 @@
 # install cli utilities
 brew install bat
 brew install eza
-brew install neofetch
 brew install neovim
 brew install git-lfs
+brew install starship
 brew install tree
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
