@@ -28,7 +28,5 @@ require("lazy").setup({
   -- the theme Lazy will use when new plugins are installed
   -- this is not the GUI itself; that is controlled by primary theme
   install = { colorscheme = { "catppuccin" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true }
 })
 
