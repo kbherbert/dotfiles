@@ -13,6 +13,7 @@ truncate_to_repo = false
 
 [directory.substitutions]
 '~/Workspace' = '~/w'
+'~/Developer' = '~/dev'
 
 [git_branch]
 symbol = " "
