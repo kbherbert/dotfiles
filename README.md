@@ -23,10 +23,10 @@ mkdir -p "$(bat --config-dir)/themes"
 cd "$(bat --config-dir)/themes"
 
 # Download theme in '.tmTheme' format, for example:
-curl -L -O https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Latte.tmTheme
-curl -L -O https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
-curl -L -O https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme
-curl -L -O https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+curl -L -o 'Catppuccin Latte.tmTheme' https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Latte.tmTheme
+curl -L -o 'Catppuccin Frappe.tmTheme' https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
+curl -L -o 'Catppuccin Macchiato.tmTheme' https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme
+curl -L -o 'Catppuccin Mocha.tmTheme' https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
 
 # Update the binary cache
 bat cache --build
