@@ -2,3 +2,6 @@ theme=catppuccin-mocha
 font-size=15
 window-padding-x=15
 window-padding-y=20, 5
+macos-icon=custom-style
+macos-icon-ghost-color=cba6f7
+macos-icon-screen-color=313244
