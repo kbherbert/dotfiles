@@ -16,3 +16,15 @@ ip-private() {
 batdiff() {
     git diff --name-only --relative --diff-filter=d | xargs bat --diff
 }
+
+# "fd": find directory 
+# Find and cd into the selected directory, only showing the first and second
+# level sub-directories and not showing the directories within those.
+fd() {
+  DIR=`find ~/Workspace/* -maxdepth 2 -type d -print 2> /dev/null | fzf` \
+    && cd "$DIR"
+}
+
+so() {
+    source ~/.zshrc
+}
