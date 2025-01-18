@@ -17,11 +17,17 @@ batdiff() {
     git diff --name-only --relative --diff-filter=d | xargs bat --diff
 }
 
-# "fd": find directory 
-# Find and cd into the selected directory, only showing the first and second
+# "fd": find directory
+# Find and cd into the selected directory using fzf, only showing the first and second
 # level sub-directories and not showing the directories within those.
+# Excludes .git directories.
 fd() {
-  DIR=`find ~/Workspace/* -maxdepth 2 -type d -print 2> /dev/null | fzf` \
+    DIR=$(
+          find ~/Workspace ~/Developer \
+               -maxdepth 3 \
+               -name ".git" -prune -o \
+               -type d -print 2> /dev/null | fzf
+         ) \
     && cd "$DIR"
 }
 
