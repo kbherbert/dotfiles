@@ -4,6 +4,4 @@ window-padding-x=15
 window-padding-y=20, 5
 window-height=18
 window-width=98
-macos-icon=custom-style
-macos-icon-ghost-color=cba6f7
-macos-icon-screen-color=313244
+window-save-state=always
