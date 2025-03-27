@@ -1,9 +1,7 @@
-# Weather
 weather() {
     curl -s "https://wttr.in/${1:-Louisville}?format=v2"
 }
 
-# IP addresses
 ip-public() {
     curl ipecho.net/plain; echo
 }
@@ -29,6 +27,15 @@ fd() {
                -type d -print 2> /dev/null | fzf
          ) \
     && cd "$DIR"
+}
+
+# "gb" - git branch [checkout]
+# List git branches with fzf, and automatically checkout
+gb() {
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
 so() {
