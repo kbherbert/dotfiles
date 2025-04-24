@@ -1,4 +1,9 @@
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Rex, { desc = "Open file explorer" })
+
+-- Primeagen
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected line down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected line up" })
 
 -- Tabs
 vim.keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New Tab" })
