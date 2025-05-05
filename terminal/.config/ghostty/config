@@ -1,7 +1,10 @@
 theme=catppuccin-mocha
 font-size=15
+font-thicken=true
 window-padding-x=15
 window-padding-y=20, 5
 window-height=18
 window-width=98
 window-save-state=always
+auto-update-channel=stable
+adjust-cell-height=5%
