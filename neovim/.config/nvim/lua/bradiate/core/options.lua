@@ -7,9 +7,8 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
+vim.opt.colorcolumn = "140"
 vim.wo.relativenumber = true
-vim.opt.list = true
-vim.opt.listchars = { tab = "→ ", space = "·"}
 
 -- colors and themes
 vim.termguicolors = true
