@@ -10,8 +10,11 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.colorcolumn = "140"
-vim.wo.relativenumber = true
+vim.opt.relativenumber = true
 
 -- colors and themes
-vim.termguicolors = true
+vim.opt.termguicolors = true
 vim.opt.background = "dark"
+
+-- system
+vim.opt.clipboard:append("unnamedplus")
