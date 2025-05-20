@@ -9,6 +9,7 @@ return {
       defaults = {
         path_display = { "smart" },
         file_ignore_patterns = {
+          "dist",
           "node_modules",
           ".git/",
           ".hg/",
