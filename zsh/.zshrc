@@ -1,8 +1,5 @@
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
-# Disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
-
 # Define environment variables.
 export BAT_THEME="Catppuccin Frappe"
 export STARSHIP_CONFIG=~/.dotfiles/prompt/starship.toml
