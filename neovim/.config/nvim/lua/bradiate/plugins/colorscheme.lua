@@ -10,6 +10,6 @@ return {
       --https://github.com/catppuccin/nvim/tree/main?tab=readme-ov-file#configuration
     }
 
-    vim.cmd("colorscheme catppuccin-mocha")
+    vim.cmd("colorscheme catppuccin-macchiato")
   end
 }
