@@ -15,6 +15,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Critical nvim settings go here
+vim.g.mapleader = " "
+vim.g.loaded_netrw = 1 -- Disable netrw because nvim-tree
+vim.g.loaded_netrwPlugin = 1  -- Disable netrw because nvim-tree
 
 -- Setup lazy.nvim
 require("lazy").setup({
