@@ -11,6 +11,12 @@ return {
         separator_style = 'thin',
         always_show_bufferline = false,
         mode = "buffers",
+        offsets = {
+          {
+            filetype = "NvimTree",
+          }
+        }
+   
       }
     }
   end
