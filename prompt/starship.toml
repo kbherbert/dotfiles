@@ -18,6 +18,9 @@ truncate_to_repo = false
 [git_branch]
 symbol = " "
 
+[git_status]
+stashed = ''
+
 [username]
 # show_always = true
 format = 'brady: ($style)'
