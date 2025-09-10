@@ -6,7 +6,7 @@ return {
     local bufferline = require("bufferline")
 
     bufferline.setup {
-      highlights = require("catppuccin.groups.integrations.bufferline").get(),
+      highlights = require("catppuccin.groups.integrations.bufferline").get_theme(),
       options = {
         separator_style = 'thin',
         always_show_bufferline = false,
