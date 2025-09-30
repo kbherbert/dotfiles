@@ -10,6 +10,14 @@ source <(fzf --zsh)
 # Functions.
 source ~/.dotfiles/functions/.functions
 
+# Update KEYMAP variable whenever keymap changes
+function zle-keymap-select {
+  export ZSH_VIM_MODE=$KEYMAP
+  zle reset-prompt
+}
+zle -N zle-keymap-select
+export ZSH_VIM_MODE=viins  # start in insert mode
+
 # Custom aliases
 alias ..="cd .."
 alias ../..="cd ../.."

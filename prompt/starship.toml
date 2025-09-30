@@ -4,6 +4,26 @@
 add_newline = true
 command_timeout = 1000
 
+[custom.vim_insert_mode]
+command = '''
+if [[ ${ZSH_VIM_MODE} != vicmd ]]; then
+  echo "[I]"
+fi
+'''
+when = true
+shell = ["zsh"]
+style = "bold green"
+
+[custom.vim_normal_mode]
+command = '''
+if [[ ${ZSH_VIM_MODE} == vicmd ]]; then
+  echo "[N]"
+fi
+'''
+when = true
+shell = ["zsh"]
+style = "bold blue"
+
 [aws]
 disabled = true
 
