@@ -2,9 +2,10 @@ theme=Catppuccin Mocha
 font-size=15
 font-thicken=true
 window-padding-x=15
-window-padding-y=20, 5
+window-padding-y=15, 5
 window-height=18
 window-width=98
 window-save-state=always
 auto-update-channel=stable
 adjust-cell-height=5%
+keybind = super+shift+d=new_split:up
