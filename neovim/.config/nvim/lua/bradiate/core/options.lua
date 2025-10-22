@@ -12,6 +12,9 @@ vim.opt.autoindent = true
 vim.opt.colorcolumn = "140"
 vim.opt.relativenumber = true
 
+-- Keep a 1-column gutter visible at all times
+vim.opt.signcolumn = "yes"
+
 -- colors and themes
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
