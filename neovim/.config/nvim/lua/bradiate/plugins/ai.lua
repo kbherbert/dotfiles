@@ -1,6 +1,6 @@
 return {
   "github/copilot.vim",
-  event = "InsertEnter",
+  event = "VeryLazy",
   config = function()
     vim.g.copilot_filetypes = {
       ["*"] = true,
