@@ -40,6 +40,11 @@ curl -L -o 'Catppuccin Mocha.tmTheme' https://github.com/catppuccin/bat/raw/main
 bat cache --build
 ```
 
+## sensitive git configuration
+Sensitive configs are managed in a private submodule. Instructions for initializing/updating it:
+
+`git submodule update --init --recursive`
+
 **References**
 
 - [dotfiles.github.io](http://dotfiles.github.io)
