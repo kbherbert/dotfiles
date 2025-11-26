@@ -1,6 +1,7 @@
 [user]
 	name = Brady Herbert
-	email = kbradyherbert@gmail.com
+[include]
+	path = ~/.dotfiles/git/private/.gitconfig-personal
 [alias]
 	co = checkout
 	cleanup = "!git branch | grep -ve master$ -ve develop$ | xargs git branch -D && git remote prune origin"
@@ -8,16 +9,12 @@
 	revision = rev-list --count master
 [pull]
 	rebase = false
-[includeIf "gitdir:~/Developer/jw/"] # for bethel
-	path = ~/.dotfiles/git/.gitconfig-bethel
-[includeIf "gitdir:~/Workspace/"] # for work
-	path = ~/.dotfiles/git/.gitconfig-work
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [core]
-	editor = nvim
+  editor = nvim
