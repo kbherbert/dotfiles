@@ -6,8 +6,9 @@ return {
   config = function()
     local catppuccin = require("catppuccin")
 
+    --https://github.com/catppuccin/nvim/tree/main?tab=readme-ov-file#configuration
     catppuccin.setup {
-      --https://github.com/catppuccin/nvim/tree/main?tab=readme-ov-file#configuration
+      transparent_background = true,
     }
 
     vim.cmd("colorscheme catppuccin-mocha")
