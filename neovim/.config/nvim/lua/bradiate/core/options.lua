@@ -12,6 +12,10 @@ vim.opt.autoindent = true
 vim.opt.colorcolumn = "140"
 vim.opt.relativenumber = true
 
+-- Searching: make search case-insensitive by default, case-sensitive if uppercase present
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- Keep a 1-column gutter visible at all times
 vim.opt.signcolumn = "yes"
 
