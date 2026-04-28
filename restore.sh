@@ -28,3 +28,4 @@ stow git
 stow functions
 stow neovim
 stow terminal
+stow ai
