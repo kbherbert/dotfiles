@@ -1,7 +1,12 @@
 local builtin = require('telescope.builtin')
 
 -- Git
-vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Telescope git status" })
+vim.keymap.set("n", "<leader>gs", function()
+  builtin.git_status({
+    layout_strategy = "vertical", 
+    layout_config = { preview_height = 0.6 },
+  })
+end, { desc = "Telescope git status" })
 
 -- Files
 local function find_all_files()
