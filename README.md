@@ -16,6 +16,14 @@ restore.sh | sh
 
 ```
 
+## Language Servers (LSP)
+
+For now, I've decided not to use an LSP manager like Mason. Instead, I'll add things as I need them:
+
+ 1. `bun add -g typescript-language-server typescript`
+ 2. `bun add -g @johnnymorganz/stylua-bin`
+ 3. `brew install lua-language-server`
+
 ## create/restore bat themes
 
 ```sh
