@@ -2,7 +2,34 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Rex, { desc = "Open file explorer" })
 
 -- [Y]ank [P]ath to system clipboard
 local function copy_relative_path()
-  local relative_path = vim.fn.expand('%:p')
+  local file_path = vim.fn.expand('%:p')
+
+  if file_path == '' then
+    vim.notify('Current buffer has no file path', vim.log.levels.WARN)
+    return
+  end
+
+  local file_dir = vim.fn.expand('%:p:h')
+  local git_root = vim.fn.systemlist({
+    'git',
+    '-C',
+    file_dir,
+    'rev-parse',
+    '--show-toplevel',
+  })[1]
+
+  if not git_root or git_root == '' then
+    vim.notify('Current file is not inside a Git repository', vim.log.levels.WARN)
+    return
+  end
+
+  local relative_path = vim.fs.relpath(git_root, file_path)
+
+  if not relative_path then
+    vim.notify('Unable to determine path relative to Git root', vim.log.levels.WARN)
+    return
+  end
+
   vim.fn.setreg('+', relative_path)
   vim.notify('Copied: ' .. relative_path)
 end
