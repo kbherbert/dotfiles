@@ -1,7 +1,7 @@
 [user]
 	name = Brady Herbert
 [include]
-
+	path = ~/.dotfiles/git/private/.gitconfig-personal
 [alias]
 	co = checkout
 	cleanup = "!git branch | grep -ve master$ -ve develop$ | xargs git branch -D && git remote prune origin"
