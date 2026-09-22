@@ -1,6 +1,6 @@
 return {
   {
-    'stevearc/oil.nvim',
+    "stevearc/oil.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     ---@module 'oil'
     ---@type oil.SetupOpts
@@ -9,7 +9,7 @@ return {
       -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
       default_file_explorer = false,
       view_options = {
-        show_hidden = true
+        show_hidden = true,
       },
       keymaps = {
         ["g?"] = false,
@@ -27,16 +27,16 @@ return {
         ["gs"] = false,
         ["gx"] = false,
         ["g."] = { "actions.toggle_hidden", mode = "n" },
-        ["g\\"] = false
-      }
+        ["g\\"] = false,
+      },
     },
     lazy = false,
   },
   {
     "nvim-tree/nvim-tree.lua",
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      local nvimtree = require "nvim-tree"
+      local nvimtree = require("nvim-tree")
 
       local opts = {
         disable_netrw = true,
@@ -61,10 +61,14 @@ return {
           root_folder_label = false,
           indent_markers = { enable = true },
         },
-        filters = {
-          dotfiles = false,
+        filters = { -- Filters-out (excludes) the display of the following file/directories
           git_ignored = false,
-          custom = { ".DS_Store", "node_modules", ".git" },
+          custom = function(path)
+            local root = require("nvim-tree.core").get_cwd()
+            local name = vim.fs.basename(path)
+
+            return name == ".DS_Store" or name == "node_modules" or (root and path == root .. "/.git")
+          end,
         },
         update_focused_file = {
           enable = true,
