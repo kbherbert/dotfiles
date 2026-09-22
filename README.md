@@ -23,6 +23,7 @@ For now, I've decided not to use an LSP manager like Mason. Instead, I'll add th
  1. `bun add -g typescript-language-server typescript`
  2. `bun add -g @johnnymorganz/stylua-bin`
  3. `brew install lua-language-server`
+ 4. `bun add -g pyright`
 
 ## create/restore bat themes
 
