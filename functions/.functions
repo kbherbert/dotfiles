@@ -18,12 +18,13 @@ batdiff() {
 # "fd": find directory
 # Find and cd into the selected directory using fzf, only showing the first and second
 # level sub-directories and not showing the directories within those.
-# Excludes .git directories.
+# Excludes .git and node_modules directories.
 fd() {
     DIR=$(
           find ~/Workspace ~/Developer \
                -maxdepth 3 \
                -name ".git" -prune -o \
+               -name "node_modules" -prune -o \
                -type d -print 2> /dev/null | fzf
          ) \
     && cd "$DIR"
