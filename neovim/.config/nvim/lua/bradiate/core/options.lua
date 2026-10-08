@@ -25,3 +25,12 @@ vim.opt.background = "dark"
 
 -- system
 vim.opt.clipboard:append("unnamedplus")
+
+-- native diagnostics
+vim.diagnostic.config({
+  virtual_text = true, -- inline messages
+  signs = true, -- gutter
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
