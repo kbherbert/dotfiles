@@ -29,7 +29,7 @@ For now, I've decided not to use an LSP manager like Mason. Instead, I'll add th
 Angular support requires Node.js and `ngserver` on `PATH`. Use a language-server version compatible with your project's Angular version.
 The config resolves global Bun/npm probe paths from the `ngserver` symlink and keeps `ts_ls` enabled alongside `angularls`.
 In an Angular/Nx workspace (`angular.json` or `nx.json`), both servers attach to component `.ts` files, including inline
-`template: \`...\`` strings; `angularls` also serves external HTML templates. Check attachment with `:checkhealth vim.lsp`.
+``template: `...` `` strings; `angularls` also serves external HTML templates. Check attachment with `:checkhealth vim.lsp`.
 Treesitter highlights inline templates with the Angular parser. Parser installation is asynchronous, so reopen buffers after
 the initial installation finishes.
 
