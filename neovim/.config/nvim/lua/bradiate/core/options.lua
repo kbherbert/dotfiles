@@ -34,3 +34,23 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = true,
 })
+
+-- Ghostty tab title
+vim.opt.title = true
+
+local function update_title()
+  local file_dir = vim.fn.expand("%:p:h")
+  local dir = (file_dir ~= "" and vim.fn.isdirectory(file_dir) == 1) and file_dir or vim.fn.getcwd()
+
+  local root = vim.fn.systemlist({ "git", "-C", dir, "rev-parse", "--show-toplevel" })[1]
+  if vim.v.shell_error ~= 0 or not root or root == "" then
+    root = dir
+  end
+
+  vim.opt.titlestring = vim.fn.fnamemodify(root, ":t")
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged", "BufEnter" }, {
+  group = vim.api.nvim_create_augroup("GhosttyTitle", { clear = true }),
+  callback = update_title,
+})
